@@ -121,7 +121,7 @@ static MI_Boolean HttpClientCallbackOnResponseFn(
 
     if (lastChunk && !self->sentResponse) /* Only last chunk */
     {
-        if (*data)
+        if (data && *data)
         {
             WSMAN_WSHeader wsheaders;
 
